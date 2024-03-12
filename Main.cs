@@ -184,7 +184,10 @@ namespace MachineControlDesktop
             for (int i = 0; i < _Devices.Count; i++)
             {
                 Device device = _Devices[i];
-                device.SendCommand("TakePicture", OnSocketCloseNotDetected(device));
+                device.SendCommand("TakePicture", () => {
+                    OnSocketCloseNotDetected(device);
+                    i--;
+                });
             }
         }
 
