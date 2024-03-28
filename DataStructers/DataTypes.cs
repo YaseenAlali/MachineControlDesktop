@@ -8,7 +8,7 @@ namespace MachineControlDesktop
 {
     public enum CameraType
     {
-        Top, Bottom, Left, Right,
+        Top, I_Front, I_Back, O_Front, O_Back,
     }
     public class Device
     {

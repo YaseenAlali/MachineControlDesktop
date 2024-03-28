@@ -148,7 +148,7 @@ namespace MachineControlDesktop
 
             while (File.Exists(filePath))
             {
-                fileName = $"{now.ToString("yyyyMMddHHmmss")}{cameraTypeString}{counter}.jpg";
+                fileName = $"{now.ToString("yyyyMMddHHmmss")}_{cameraTypeString}{counter}.jpg";
                 filePath = Path.Combine(directoryPath, fileName);
                 counter++;
             }
